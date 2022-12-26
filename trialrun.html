@@ -1,0 +1,545 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>wiki design-simple-page</title>
+		<style>
+			html {
+  				scroll-behavior: smooth;
+			}
+			body{
+				background-color:08051A;
+			}
+			svg
+			{
+				width:100%
+				height:100vh;
+				position:absolute;
+				top:200px;
+				z-index:1;
+			}
+			sponwall
+			{
+				width:100%;
+				height: 30vh;
+				background-color: 16007A;
+				
+			}
+			contactinfo
+			{
+				width:30%;
+				height:12vh;
+				background-color:16007A;
+				line-height:5px;
+			}
+			line{
+				height:28vh;
+				width:4px;
+				background-color:black;
+			}
+			sponicon{
+				width:10vh;
+				height:10vh;
+				border-radius:50%;
+				background-color: F167FD;
+			}
+			h1
+			{
+				font-size: 30px;
+				
+			}
+			p{
+				
+			}
+			.button
+			{
+				background-color:FAF44B;	
+				width:160px;
+				height:50px;
+  				text-align: center;
+				line-height:50px;
+  				color:black;
+  				font size="4";
+				
+				transition: 0.4s;
+				border-radius:8px;
+			}
+			.topic
+			{
+				background-color:yellow;	
+				width:160px;
+				height:50px;
+  				text-align: center;
+				line-height:50px;
+  				color:black;
+				cursor: pointer;
+			}
+			.button2
+			{
+				background-color:08051A;
+				width:50%;
+				height:25px;
+				color:white;
+			}
+			
+			
+			
+			
+			
+			.button:hover
+			{
+				background-color:F7F786;
+				
+				color: A3A39D;
+			}
+			
+			
+			 .button:hover .hover
+			{
+  				display:block;
+				border: none;
+				width:120%;
+				text-align:left;
+				box-shadow: 0 20px 30px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+				color: black;
+				
+			}
+			.colorblock
+			{
+				width: 100%;
+				height: 10%;
+				background-color: 11064A;
+			}
+			.center 
+			{
+  				display: block;
+  				margin-left: auto;
+  				margin-right: auto;
+				margin-bottom: 40px;
+				margin-top: 40px;
+  				width: 75%;
+			} 
+			.pager
+			{
+				background-color:FFFFEE;
+				width:60px;
+				height:30px;
+				border-radius:10px;
+				display:inline-block;
+				text-align:center;
+				line-height:30px;
+				font-size:20px;
+				transition:0.2s;
+				color:black;
+			}
+			.pager2
+			{
+				background-color:E8E6FF;
+				width:80px;
+				height:40px;
+				border-radius:7px;
+				display:inline-block;
+				text-align:center;
+				line-height:40px;
+				font-size:30px;
+				transition:0.2s;
+				color:black;
+			}
+			.pager3{
+				opacity:0;
+			}
+			
+      			#section1 
+			{
+  				height: 50%;
+				width:100%;
+  				background-color: 08051A;
+			}
+			#section2 
+			{
+  				height: 50%;
+				width:100%;
+  				background-color: 08051A;
+			}
+			#section3 
+			{
+  				height: 50%;
+				width:100%;
+  				background-color: 08051A;
+			}
+			.progress-container 
+			{
+  				width: 100%;
+  				height: 4px;
+  				background: F7F786;
+			}
+
+			.progress-bar 
+			{
+  				height: 4px;
+  				background: #04AA6D;
+  				width: 0%;
+			}
+			.motop{
+				animation-name: topp;
+				animation-play-state: running;
+				width:200px;
+				height:90px;
+				background-color: violet;
+				animation-iteration-count: 1;
+				animation-duration: 1.5s;
+				animation-delay: 0.3s;
+				border-radius: 20px;
+				animation-fill-mode: forwards;
+				position:fixed;
+			}
+			.fakepager
+			{
+				background-color:FFFFEE;
+				width:60px;
+				height:30px;
+				border-radius:10px;
+				display:inline-block;
+				text-align:center;
+				line-height:30px;
+				font-size:20px;
+				transition:0.5s;
+				color:black;
+				display:none;
+			}
+			@keyframes topp 
+				{
+    					from{ left: 85%; top:110%;opacity:1; }
+    					to{ left: 85%; top:10%;opacity:0; }
+				}
+  			@keyframes test 
+				{
+    					0% { left: 50%; top:30%;background-color:white; }
+    					
+    					 50%{ left: 70%; top:30%;background-color:black; }
+					
+    					 100%{ left: 50%; top:30%;background-color:white; }
+					
+    					
+				}
+			@keyframes test2 
+				{
+    					0% { left: 15%; top:70%;background-color:white; }
+    					
+    					 50%{ left: 34%; top:70%;background-color:black; }
+    					 100%{ left: 15%; top:70%;background-color:white; }
+				}
+			@keyframes test3 
+				{
+    					0% { left: 50%; top:40%;background-color:white; }
+    					
+    					 50%{ left: 70%; top:40%;background-color:black; }
+    					 100%{ left: 50%; top:40%;background-color:white; }
+				}
+			@keyframes spin
+				{
+    					0% {transform:rotate(0deg);left:50%;top:60%;background-color:white; }
+					25% {transform:rotate(180deg);left:40%;top:70%;background-color:grey; }
+					50% {transform:rotate(360deg);left:50%;top:80%;background-color:black; }
+					75% {transform:rotate(540deg);left:60%;top:70%;background-color:grey; }
+    					100%{ transform:rotate(720deg);left:50%;top:60%;background-color:white; }
+				}
+			@keyframes spin2
+				{
+    					0% {transform:rotate(0deg);background-color:black; }
+					25% {transform:rotate(180deg);background-color:grey; }
+					50% {transform:rotate(360deg);background-color:black; }
+					75% {transform:rotate(540deg);background-color:grey; }
+    					100%{ transform:rotate(720deg);background-color:black; }
+				}
+			@keyframes colorchange
+				{
+    					0% {background-color:white; }
+					
+    					50%{ background-color:black; }
+					100%{background-color:white;}
+				}
+			.hover
+			{
+  				display:none;
+  				background-color:white;
+				text-align: center;
+				color: black;
+			}
+			.test 
+			{
+  				background-color: yellow;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<body bgcolor="white">
+		<div class="main" id="section1" style=position:absolute;top:561px;left:0%><span></span></div>
+		<div class="main" id="section2" style=position:absolute;top:1492px;left:0%><span></span></div>
+		<div class="main" id="section3" style=position:absolute;top:2249px;left:0%><span></span></div>
+		<img src="https://images.pexels.com/photos/1906435/pexels-photo-1906435.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" style="position:absolute;top:10%;left:0%;width:100%;height:65%;">
+		<div class="button2" style=position:absolute;top:87%;left:23%><p>The Lord of the Rings is an epic high-fantasy novel[a] by English author and scholar J. R. R. Tolkien. Set in Middle-earth, intended to be Earth at some distant time in the past, the story began as a sequel to Tolkien's 1937 children's book The Hobbit, but eventually developed into a much larger work. Written in stages between 1937 and 1949, 
+The Lord of the Rings is one of the best-selling books ever written, with over 150 million copies sold.
+
+The title refers to the story's main antagonist, 
+the Dark Lord Sauron, who in an earlier age created the One Ring to rule the other Rings of Power given to Men, Dwarves, and Elves, 
+in his campaign to conquer all of Middle-earth. From homely beginnings in the Shire, a hobbit land reminiscent of the English countryside, the story ranges across Middle-earth, following the quest to destroy the One Ring mainly through the eyes of the hobbits Frodo, Sam, Merry and Pippin.
+
+Although often called a trilogy, the work was intended by Tolkien to be one volume of a two-volume set along with The Silmarillion. 
+<dt ><img src="https://static.wikia.nocookie.net/lotr/images/9/9b/TheOneRing.jpg/revision/latest?cb=20131116000607" class="center" ></dt>
+			</p></div>
+		<div class="button2" style=position:absolute;top:217%;left:23%><p>
+For economic reasons, The Lord of the Rings was published over the course of a year from 29 July 1954 to 20 October 1955, in three volumes titled The Fellowship of the Ring, The Two Towers, and The Return of the King. The work is divided internally into six books, two per volume, with several appendices of background material. Some later editions print the entire work in a single volume, following the author's original intent.
+
+Tolkien's work, after an initially mixed reception by the literary establishment, has been the subject of extensive analysis of its themes and origins. Influences on this earlier work, and on the story of The Lord of the Rings, include philology, mythology, Christianity, earlier fantasy works, and his own experiences in the First World War.
+
+The Lord of the Rings has since been reprinted many times and translated into at least 38 languages. Its enduring popularity has led to numerous references in popular culture, the founding of many societies by fans of Tolkien's works, and the publication of many books about Tolkien and his works. It has inspired numerous derivative works, including paintings, music, films, television, video games, and board games, helping create and shape the modern fantasy genre, within which it is considered one of the greatest books of all time.
+<dt ><img src="https://a57.foxnews.com/static.foxbusiness.com/foxbusiness.com/content/uploads/2020/03/931/523/Lord-of-the-rings-books.jpg?ve=1&tl=1" class="center" ></dt>
+		
+			</p></div>
+		<img src="https://quickchart.io/chart?bkg=white&c={type:%27bar%27,data:{labels:[%27Q1%27,%27Q2%27,%27Q3%27,%27Q4%27],%20datasets:[{label:%27Users%27,data:[50,60,70,180]},{label:%27Revenue%27,data:[100,200,300,400]}]}}" style="position:absolute;top:330%;left:25%;width:50%">
+		
+		
+		
+		<sponwall style="position:absolute;top:3400px;left:0px;">
+				<contactinfo style="position:absolute;top:4vh;left:5%;">
+					<h1>CONTACT INFO</h1><br>
+					<p>&nbsp&nbsp&nbspidghirsrvsih@gmail.com</p><br>
+					<p>&nbsp&nbsp&nbsplrlgjbnjn@weirdo.com</p><br>
+					<p>&nbsp&nbsp&nbspfvgfjd@thlkg.com</p><br>
+				</contactinfo>
+				<line style="position:absolute;top:1vh;left:34%;"></line>
+				<sponicon style="position:absolute;top:5vh;left:52.5%;"></sponicon>
+				<sponicon style="position:absolute;top:5vh;left:77.5%;"></sponicon>
+				<sponicon style="position:absolute;top:17vh;left:40%;"></sponicon>
+				<sponicon style="position:absolute;top:17vh;left:65%;"></sponicon>
+				<sponicon style="position:absolute;top:17vh;left:90%;"></sponicon>
+		</sponwall>
+
+		<div class="colorblock" style="position:fixed;left:0%;top:0%" >
+			<a href="file:///C:/Users/user/Desktop/0430.html"><div class="topic" style=position:fixed;left:2%;top:2%><span style=font-size:30px;">Mer Se</span></div></a> 
+		</div>
+		<div class="progress-container" style="position:fixed;left:0%;top:10%">
+    				<div class="progress-bar" id="myBar"></div>
+  		 	</div>
+			
+			<div class="button" style=position:fixed;left:22%;top:2% >
+					<span style="font-size:25px;" ><font face="comic sans ms" id="title" onmouseover="changecursor()" onmouseout="changeback()">
+						
+							IG intro
+						
+					</font></span>
+					 <span id="myText"></span>
+					<div class="hover" >
+						<dt><a href="file:///C:/Users/user/Desktop/20220508%20ig%20intro%20dry.html" style="text-decoration:none;color:black;"><font face="comic sans ms" id="textcolor" onmouseover="textcolorchange()" onmouseout="textcolorchangeback()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dry</font></a></dt>
+						<dt><a href="file:///C:/Users/user/Desktop/20220508%20ig%20intro%20wet.html" style="text-decoration:none;color:black;"><font face="comic sans ms" id="textcolor2" onmouseover="textcolorchange2()" onmouseout="textcolorchangeback2()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;wet</font></a></dt>
+						<dt><a href="file:///C:/Users/user/Desktop/20220508%20ig%20intro%20advisor.html" style="text-decoration:none;color:black;"><font face="comic sans ms" id="textcolor3" onmouseover="textcolorchange3()" onmouseout="textcolorchangeback3()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;advisor</font></a></dt>						
+					</div>
+				</div>
+				<div class="button" style=position:fixed;left:37%;top:2% >
+					<span style="font-size:25px;"><font face="comic sans ms" id="title2" onmouseover="changecursor2()" onmouseout="changeback2()">
+						
+							sunscreen
+						
+					</font></span>
+					
+					<div class="hover">
+						<dt><font face="comic sans ms">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dogs</font></dt>
+						<dt><a href="file:///C:/Users/user/Desktop/20220508%20sunscreen.html" style="text-decoration:none;color:black;"><font face="comic sans ms" id="textcolor4" onmouseover="textcolorchange4()" onmouseout="textcolorchangeback4()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cats</font></a></dt>
+						<dt><font face="comic sans ms">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aquatic beings</font></dt>						
+					</div>
+				</div>
+			
+			<p>
+				<div class="button" style=position:fixed;left:52%;top:2%;>
+					<span style="font-size:25px;"><font face="comic sans ms" id="title3" onmouseover="changecursor3()" onmouseout="changeback3()">
+						psychology
+					</font></span>
+					
+					<div class="hover" >
+						<dt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;色彩心理學</dt>
+					</div>
+				</div>
+			</p>
+			<p>
+				<div class="button" style=position:fixed;left:67%;top:2%;>
+					<span style="font-size:25px;"><font face="comic sans ms" id="title4" onmouseover="changecursor4()" onmouseout="changeback4()">
+						pests
+					</font></span>
+					<div class="hover" >
+						<dt><a href="https://www.kdais.gov.tw/upload/kdais/files/web_structure/7447/27-1-3.pdf" style="text-decoration:none;color:black;"><font face="comic sans ms" id="textcolor5" onmouseover="textcolorchange5()" onmouseout="textcolorchangeback5()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bacteria</font></a></dt>
+					</div>
+				</div>
+			</p>
+			<p>
+				<div class="button" style=position:fixed;left:82%;top:2% >
+					<span style="font-size:25px;"><font face="comic sans ms" id="title5" onmouseover="changecursor5()" onmouseout="changeback5()">
+						
+							clay
+						
+					</font></span>
+					<div class="hover" >
+						<dt><a href="file:///C:/Users/user/Desktop/20220508%20clay.html" style="text-decoration:none;color:black;"><font face="comic sans ms" id="textcolor6" onmouseover="textcolorchange6()" onmouseout="textcolorchangeback6()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;protection</font></a></dt>					
+					</div>
+				</div>
+			</p>
+			<a href="#section1"><div class="pager" id="pager" style=position:fixed;top:12%;left:3% ><font face="Courier"><strong>P1</strong></font></div></a>
+			<a href="#section2"><div class="pager" id="pager2" style=position:fixed;top:18%;left:3%  ><span><font face="Courier"><strong>P2</strong></font></span></div></a>
+			<a href="#section3"><div class="pager" id="pager3" style=position:fixed;top:24%;left:3%  ><span><font face="Courier"><strong>P3</strong></font></span></div></a>
+			<button onclick="movetop()" id="movetop" style="position:absolute;top:450%;left:85%;" class="fakepager">top</button>
+		<script>
+
+			
+
+			window.onscroll = function() {myFunction2()};
+
+			function movetop()
+			{
+				document.getElementById("movetop").className = "motop";
+				document.body.scrollTop = 0;
+  				document.documentElement.scrollTop = 0
+			}
+			
+			function myFunction2() 
+			{
+			var scrollTop = document.body.scrollTop
+				
+				if (document.body.scrollTop > 2700) 
+				{
+    					document.getElementById("movetop").className = "pager";
+  				} else if (document.body.scrollTop < 10){
+					document.getElementById("movetop").className = "motop";
+				}else{
+					document.getElementById("movetop").className = "fakepager";
+				}
+				
+  				if (document.body.scrollTop < 540) 
+				{
+    					document.getElementById("pager").className = "pager3";
+  				} else if (document.body.scrollTop < 1492) {
+    					document.getElementById("pager").className = "pager2";
+  				} else{
+					document.getElementById("pager").className = "pager";
+				}
+				if (document.body.scrollTop < 540) 
+				{
+					document.getElementById("pager2").className = "pager3";
+  				} else if (document.body.scrollTop < 1492) {
+					document.getElementById("pager2").className = "pager";
+  				} else if (document.body.scrollTop < 2239){
+					document.getElementById("pager2").className = "pager2";
+				}else{
+					document.getElementById("pager2").className = "pager";
+				}
+				if (document.body.scrollTop < 540) 
+				{
+					document.getElementById("pager3").className = "pager3";
+  				} else if (document.body.scrollTop < 2239) {
+					document.getElementById("pager3").className = "pager";
+  				} else if (document.body.scrollTop < 2800){
+					document.getElementById("pager3").className = "pager2";
+				}else{
+					document.getElementById("pager3").className = "pager";
+				}
+			document.getElementById("myText").innerHTML = scrollTop;
+			}
+			
+			function changecursor()
+				{
+					document.getElementById("title"). style. cursor = "pointer";
+				}
+			function changeback()
+				{
+					document.getElementById("title"). style. cursor = "normal";
+					
+				}
+			function changecursor2()
+				{
+					document.getElementById("title2"). style. cursor = "pointer";
+				}
+			function changeback2()
+				{
+					document.getElementById("title2"). style. cursor = "normal";
+					
+				}
+			function changecursor3()
+				{
+					document.getElementById("title3"). style. cursor = "pointer";
+				}
+			function changeback3()
+				{
+					document.getElementById("title3"). style. cursor = "normal";
+					
+				}
+			function changecursor4()
+				{
+					document.getElementById("title4"). style. cursor = "pointer";
+				}
+			function changeback4()
+				{
+					document.getElementById("title4"). style. cursor = "normal";
+					
+				}
+			function changecursor5()
+				{
+					document.getElementById("title5"). style. cursor = "pointer";
+				}
+			function changeback5()
+				{
+					document.getElementById("title5"). style. cursor = "normal";
+					
+				}
+			function textcolorchange()
+					{
+					document.getElementById("textcolor").style.color = "red";	
+					}
+			function textcolorchangeback()
+					{
+					document.getElementById("textcolor").style.color = "black";	
+					}
+			function textcolorchange2()
+					{
+					document.getElementById("textcolor2").style.color = "red";	
+					}
+			function textcolorchangeback2()
+					{
+					document.getElementById("textcolor2").style.color = "black";	
+					}
+			function textcolorchange3()
+					{
+					document.getElementById("textcolor3").style.color = "red";	
+					}
+			function textcolorchangeback3()
+					{
+					document.getElementById("textcolor3").style.color = "black";	
+					}
+			function textcolorchange4()
+					{
+					document.getElementById("textcolor4").style.color = "red";	
+					}
+			function textcolorchangeback4()
+					{
+					document.getElementById("textcolor4").style.color = "black";	
+					}
+			function textcolorchange5()
+					{
+					document.getElementById("textcolor5").style.color = "red";	
+					}
+			function textcolorchangeback5()
+					{
+					document.getElementById("textcolor5").style.color = "black";	
+					}
+			function textcolorchange6()
+					{
+					document.getElementById("textcolor6").style.color = "red";	
+					}
+			function textcolorchangeback6()
+					{
+					document.getElementById("textcolor6").style.color = "black";	
+					}
+			
+			
+		</script>
+			
+	</body>
+</html>
